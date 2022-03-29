@@ -1,15 +1,31 @@
-export function soma(num1, num2) {
-  return num1 + num2;
+export function soma(...numeros) {
+  let resultado = 0;
+  numeros.forEach((numero) => {
+    resultado += numero;
+  });
+  return resultado;
 }
 
-export function subtracao(num1, num2) {
-  return num1 - num2;
+export function subtracao(...numeros) {
+  let resultado = 0;
+  numeros.forEach((numero) => {
+    resultado -= numero;
+  });
+  return resultado;
 }
 
-export function multiplicacao(num1, num2) {
-  return num1 * num2;
+export function multiplicacao(...numeros) {
+  let resultado = 0;
+  numeros.forEach((numero) => {
+    resultado *= numero;
+  });
+  return resultado;
 }
 
-export function divisao(num1, num2) {
-  return num1 / num2;
+export function divisao(...numeros) {
+  let resultado = 0;
+  numeros.forEach((numero) => {
+    resultado /= numero;
+  });
+  return resultado;
 }

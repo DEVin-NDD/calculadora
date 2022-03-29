@@ -7,21 +7,20 @@ import {
 
 function init() {
   const operacao = perguntarOperacao();
-  const num1 = pedirNumero();
-  const num2 = pedirNumero();
+  const listaNumeros = pedirNumero();
 
   switch (operacao) {
     case "+":
-      imprimirResultado(calcular.soma(num1, num2));
+      imprimirResultado(calcular.soma(...listaNumeros));
       break;
     case "-":
-      imprimirResultado(calcular.subtracao(num1, num2));
+      imprimirResultado(calcular.subtracao(...listaNumeros));
       break;
     case "*":
-      imprimirResultado(calcular.multiplicacao(num1, num2));
+      imprimirResultado(calcular.multiplicacao(...listaNumeros));
       break;
     case "/":
-      imprimirResultado(calcular.divisao(num1, num2));
+      imprimirResultado(calcular.divisao(...listaNumeros));
       break;
     default:
       imprimirResultado("Operação inválida");

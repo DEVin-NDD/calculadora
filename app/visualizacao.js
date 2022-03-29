@@ -5,7 +5,14 @@ export function perguntarOperacao() {
 }
 
 export function pedirNumero() {
-  return Number(window.prompt("Digite um número"));
+  const listaNumeros = [];
+
+  do {
+    const numero = Number(window.prompt("Digite um número"));
+    listaNumeros.push(numero);
+  } while (window.confirm("Deseja adicionar outro número?"));
+
+  return listaNumeros;
 }
 
 export function imprimirResultado(resultado) {
